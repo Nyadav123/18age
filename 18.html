@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: cursive;
+            color: black;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        /* Center website */
+        .main {
+            text-align: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+
+        .row {
+       
+            margin: 10px -16px;
+        }
+
+        /* Add padding BETWEEN each column */
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+
+            display: none;
+            width: 140px;
+            margin: 10px;
+            height: 220px;
+            /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content .zoom{
+            background-color: white;
+            padding: 10px;
+            border: 1px solid black;
+border-radius: 10px;           
+            width: 130px;
+            margin: 10px;
+            height: 225px;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+        .zoom {
+  /* padding: 50px; */
+
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height:200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- MAIN (Center website) -->
+    <div class="main">
+
+        <h2>WHAT'S YOUR INTEREST</h2>
+        <hr>
+
+       
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> SHOW ALL</button>
+            <button class="btn" onclick="filterSelection('nature')"> STUDYING</button>
+            <button class="btn" onclick="filterSelection('cars')"> GAMING</button>
+            <button class="btn" onclick="filterSelection('people')"> ENTERTAINMENT</button>
+        </div>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+        
+            <div class="column people">
+                <div class="content">
+                    <div class="zoom"> <a href="https://play.google.com/store/books/category/coll_1206"> <img src="read.jpg"
+                                alt="Car" style="width:100%" height="140px">
+                            <h4>READING</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="column nature">
+                <div class="content">
+                <div class="zoom"> <a href="https://www.ncertbooks.guru/ncert-books-for-class-2/">    <img src="2.jpg" alt="CLASS 2" style="width:100%" height="140px">
+                       <h4>CLASS 2</h4></a>
+                    
+                </div>
+                </div>
+            </div>
+           
+            <div class="column people">
+                <div class="content">
+                    <div class="zoom"> <a
+                            href="https://www.youtube.com/kids/?gclid=Cj0KCQiA0eOPBhCGARIsAFIwTs6LOmedTLxgzi1ajW1Zmx-ciEENL6AafTUJPW3JugrEtoKvMkRhWV0aAqMlEALw_wcB&gclsrc=aw.ds">
+                            <img src="ykid.png" alt="Car" style="width:100%" height="140px">
+                            <h4>YOUTUBE KIDS</h4>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+            <div class="column nature">
+                <div class="content">
+                    <div class="zoom"> <a href="https://www.embibe.com/exams/ncert-books-for-class-4/">     <img src="3.jpg" alt="CLASS 4" style="width:100%" height="140px">
+                         <h4>CLASS 4</h4></a>
+                    
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.miniclip.eightballpool"> <img
+                                src="8.webp" alt="Car" style="width:100%" height="140px">
+                            <h4>8 BALL POOL</h4>
+                        </a>
+            
+                    </div>
+                </div>
+            </div>
+        <div class="column nature">
+            <div class="content">
+                <div class="zoom"> <a href="https://www.embibe.com/exams/ncert-books-for-class-3/"> <img src="4.jpg"
+                            alt="CLASS 3" style="width:100%" height="140px">
+                        <h4>CLASS 3</h4>
+                    </a>
+        
+                </div>
+            </div>
+        </div><div class="column cars">
+            <div class="content">
+                <div class="zoom"> <img src="TE2.webp" alt="Car" style="width:100%" height="140px">
+                    <a href="https://play.google.com/store/apps/details?id=com.imangi.templerun2">
+                        <h4>TEMPLE RUN2</h4>
+                    </a>
+        
+                </div>
+            </div>
+        </div>
+            <div class="column nature">
+                <div class="content">
+                    <div class="zoom"> <a href="https://byjus.com/ncert-books-class-6/"></a><img src="6.jpg" alt="CLASS 6" style="width:100%" height="140px">
+                          <h4>CLASS 6</h4></a>
+                     
+                </div>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+            <div class="zoom"> <a href="https://byjus.com/ncert-books-for-class-7/"> <img src="7.jpg" alt="CLASS 7" style="width:100%" height="140px">
+                        <h4> CLASS 7</h4> </a>
+                   
+                </div>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                    <div class="zoom"> <a
+                            href="https://www.discoveryplus.in/?gclid=Cj0KCQiA0eOPBhCGARIsAFIwTs51bFHCWDvNdCmDSJWaLVGb6dM7v8Y6peQXrDGv_rt6JKadAioAhCMaAqUnEALw_wcB">
+                            <img src="dis.png" alt="DISCVERY" style="width:100%" height="140px">
+                            <h4>DISCOVERY</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                <div class="zoom"> <a href="https://byjus.com/ncert-books-for-class-8/"><img src="8.jpg" alt="CLASS 8" style="width:100%" height="140px">
+                        <h4>CLASS 8</h4></a>
+                   
+                </div>
+                </div>
+            </div>
+                    <div class="column people">
+                        <div class="content">
+                            <div class="zoom"> <a href="https://www.netflix.com/in/browse/genre/27346"> <img src="ne.jpg" alt="Car"
+                                        style="width:100%" height="140px">
+                                    <h4>NETFLIX KIDS</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+           
+            <div class="column nature">
+                <div class="content">
+                    <div class="zoom"> <img src="1.jpg" alt="CLASS 1" style="width:100%" height="140px">
+                        <a
+                            href="https://www.tiwariacademy.com/ncert-books/class-1/#:~:text=According%20to%20Class%201%20Syllabus,Special%20Series%20of%20English%20book).">
+                            <h4>CLASS 1</h4>
+                        </a>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content"><a href="1.pdf" target="_blank">
+                    <div class="zoom"> <a href="https://byjus.com/ncert-books-for-class-10/">       <img src="10.jpg" alt="CLASS 10" style="width:100%" height="140px" >
+                <h4>CLASS 10</h4></a>
+                    </a>
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <div class="zoom"> <img src="F.webp" alt="Car" style="width:100%" height="140px">
+                        <a href="https://play.google.com/store/apps/details?id=com.halfbrick.fruitninjafree">
+                            <h4>FRUIT NINJA</h4>
+                        </a>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                <div class="zoom"> <a href="https://byjus.com/ncert-books-for-class-11/">        <img src="11.png" alt="CLASS 11" style="width:100%" height="140px">
+                  <h4>CLASS 11</h4> </a>
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.innersloth.spacemafia"> <img
+                                src="AM.webp" alt="Car" style="width:100%" height="140px">
+                            <h4>AMONG US</h4>
+                        </a>
+            
+                    </div>
+            
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+    <div class="zoom"> <a href="https://byjus.com/ncert-books-for-class-12/"> <img src="12.jpg" alt="CLASS 12" style="width:100%" height="140px">
+                  <h4>CLASS 12</h4> </a>
+                </div>
+            </div>
+            </div>
+
+            <div class="column cars">
+                <div class="content">
+        <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf">    <img src="subway.webp" alt="GAME" style="width:100%" height="140px"> 
+                <h4>SUBWAY SURF</h4>
+                </a>
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+    <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"><img src="chess.webp" alt="GAME" style="width:100%" height="140px">
+                   <h4>CHESS</h4>
+                </a>
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf">  <img src="ludo.webp" alt="Car" style="width:100%"
+                            height="140px">
+                     <h4>LUDO KING</h4>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                    <div class="zoom"> <a href="https://www.ncertbooks.guru/ncert-books-for-class-5/"> <img src="5.jpg"
+                                alt="CLASS 5" style="width:100%" height="140px">
+                            <h4>CLASS 5</h4>
+                        </a>
+            
+                    </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+            <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.miniclip.carrom">   <img src="C.webp" alt="Car" style="width:100%"
+                            height="140px">
+                    <h4>CARROM</h4>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+          
+            <div class="column cars">
+                <div class="content">
+            <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.appsomniacs.da2">   <img src="MM.webp" alt="Car" style="width:100%"
+                            height="140px">
+                     <h4>MINI MILITIA</h4>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+          
+            <div class="column nature">
+                <div class="content">
+                    <div class="zoom"> <a href="https://byjus.com/ncert-books-for-class-9/"> <img src="9.jpg" alt="CLASS 9"
+                                style="width:100%" height="140px">
+                            <h4>CLASS 9</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+          
+            <div class="column cars">
+                <div class="content">
+                <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.rubygames.assassin">  <img src="HU.webp"Car" style="width:100%"
+                            height="140px">
+                <h4>HUNTER ASSASSIN</h4>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+            <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.roblox.client">  <img src="RO.webp" alt="Car" style="width:100%"
+                            height="140px">
+                      <h4>ROBLOX</h4>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+            <div class="zoom"> <a href="https://play.google.com/store/apps/details?id=com.king.candycrushsaga">   <img src="C.webp" alt="Car" style="width:100%"
+                            height="140px">
+                       <h4>CANDY CRUSH</h4>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+
+            <div class="column people">
+                <div class="content">
+                <div class="zoom"> <a href="https://www.hotstar.com/in/genres/teen">  <img src="movie.png" alt="Car" style="width:100%"
+                            height="140px">
+                   <h4>WATCH MOVIE</h4>
+                    </a>
+                  
+                </div>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                <div class="zoom"> <a href="https://www.spotify.com/in-en/">   <img src="music.jpg" alt="Car" style="width:100%" height="140px">
+                  <h4>MUSIC LISTENING</h4></a>
+                </div>
+                </div>
+            </div>
+      
+   
+         
+
+        
+            <!-- END GRID -->
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
